@@ -1,12 +1,9 @@
 #!/bin/bash
-
-set -e
-
 rm -f *.aux *.log *.toc *.pdf
 
 python build-contents.py > contents.tex
 
-#rubber -d trd.tex
-pdflatex -d trd.tex
+pdflatex trd.tex
+pdflatex trd.tex
 
 rm -f *.aux *.log *.toc contents.tex
